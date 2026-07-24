@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 const Layout = () => {
   return (
@@ -10,10 +11,7 @@ const Layout = () => {
         <Outlet />
       </main>
 
-      {/* Footer will go here in Step 7 */}
-      <footer style={{ padding: '20px', background: '#333', color: 'white', textAlign: 'center', marginTop: 'auto' }}>
-        <p>Footer Placeholder</p>
-      </footer>
+      <Footer />
     </div>
   );
 };
