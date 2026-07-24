@@ -1,8 +1,10 @@
+import Hero from '../components/home/Hero';
+
 const Home = () => {
   return (
-    <div className="container">
-      <h2>Home Page</h2>
-      <p>Welcome to Excellence International School.</p>
+    <div className="home-page">
+      <Hero />
+      {/* Sections to be added in next steps */}
     </div>
   );
 };
