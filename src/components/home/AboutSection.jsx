@@ -1,6 +1,10 @@
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import './AboutSection.css';
 
 const AboutSection = () => {
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+
   const highlights = [
     {
       title: 'Global Curriculum',
@@ -25,10 +29,15 @@ const AboutSection = () => {
   ];
 
   return (
-    <section className="about-section">
+    <section className="about-section" ref={ref}>
       <div className="container">
         <div className="about-content-wrapper">
-          <div className="about-text">
+          <motion.div 
+            className="about-text"
+            initial={{ opacity: 0, x: -50 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8 }}
+          >
             <h2 className="section-title">Welcome to Excellence</h2>
             <div className="title-underline"></div>
             <p>
@@ -38,9 +47,14 @@ const AboutSection = () => {
               We blend traditional values with modern teaching methodologies to create a vibrant learning community where every student thrives.
             </p>
             <button className="btn btn-outline">Read Our Story</button>
-          </div>
+          </motion.div>
           
-          <div className="about-image">
+          <motion.div 
+            className="about-image"
+            initial={{ opacity: 0, x: 50 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             <img 
               src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2070&auto=format&fit=crop" 
               alt="Students in classroom" 
@@ -49,10 +63,15 @@ const AboutSection = () => {
               <span className="years">25+</span>
               <span className="text">Years of<br/>Excellence</span>
             </div>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="highlights-grid">
+        <motion.div 
+          className="highlights-grid"
+          initial={{ opacity: 0, y: 50 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
           {highlights.map((item, index) => (
             <div className="highlight-card" key={index}>
               <div className="icon">{item.icon}</div>
@@ -60,7 +79,7 @@ const AboutSection = () => {
               <p>{item.description}</p>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
