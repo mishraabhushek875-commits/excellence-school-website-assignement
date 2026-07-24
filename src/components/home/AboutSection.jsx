@@ -42,7 +42,7 @@ const AboutSection = () => {
           
           <div className="about-image">
             <img 
-              src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2070&auto=format&fit=crop" 
+              src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2070&auto=format&fit=crop" 
               alt="Students in classroom" 
             />
             <div className="experience-badge">

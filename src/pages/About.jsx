@@ -40,7 +40,7 @@ const About = () => {
             </p>
           </div>
           <div className="history-image">
-            <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?q=80&w=800&auto=format&fit=crop" alt="School building history" />
+            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=800&auto=format&fit=crop" alt="School building history" />
           </div>
         </section>
 
