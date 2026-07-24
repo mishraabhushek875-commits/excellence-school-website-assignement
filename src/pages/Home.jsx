@@ -1,10 +1,11 @@
 import Hero from '../components/home/Hero';
+import AboutSection from '../components/home/AboutSection';
 
 const Home = () => {
   return (
     <div className="home-page">
       <Hero />
-      {/* Sections to be added in next steps */}
+      <AboutSection />
     </div>
   );
 };
