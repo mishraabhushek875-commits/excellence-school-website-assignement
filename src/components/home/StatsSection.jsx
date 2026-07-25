@@ -29,7 +29,7 @@ const StatsSection = () => {
             transition={{ duration: 0.6, delay: index * 0.2 }}
           >
             <div className="stat-number">
-              {inView ? <CountUp end={stat.number} duration={2.5} /> : '0'}
+              {inView ? stat.number : '0'}
               <span>{stat.suffix}</span>
             </div>
             <div className="stat-label">{stat.label}</div>
